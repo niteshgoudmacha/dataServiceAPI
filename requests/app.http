@@ -1,0 +1,36 @@
+POST http://localhost:5000/api/post/places
+Content-Type: 'application/javascript'
+
+{
+    "location": "28.2180° N, 94.7278° E",
+    "district_and_place": [{
+        "places": ["SUBANSIRI RIVER ", "MEGHANA CAVE TEMPLE", "KAMALA RESERVE FOREST", "DAPORIJIO GOOD SHEPARD CHURCH"],
+        "dis": "LowerSubansiri"
+    }, {
+        "places": ["Bomdila Monastery", "Sangti Valley", "Bomdila War Memorial and View Point", "Chilipam Monastery", "Apple Orchards"],
+        "dis": "WestKameng"
+    }],
+    "district": "Arunachalpradesh",
+    "budget": "1766",
+    "month": "jun"
+}
+
+
+# {
+#     "_id": {
+#         "$oid": "5e2304411c9d44000036baa2"
+#     },
+#     "location": "28.2180° N, 94.7278° E",
+#     "district_and_place": [{
+#         "places": ["SUBANSIRI RIVER ", "MEGHANA CAVE TEMPLE", "KAMALA RESERVE FOREST", "DAPORIJIO GOOD SHEPARD CHURCH"],
+#         "dis": "LowerSubansiri"
+#     }, {
+#         "places": ["Bomdila Monastery", "Sangti Valley", "Bomdila War Memorial and View Point", "Chilipam Monastery", "Apple Orchards"],
+#         "dis": "WestKameng"
+#     }],
+#     "district": "Arunachalpradesh",
+#     "budget": {
+#         "$numberInt": "1766"
+#     },
+#     "month": "jun"
+# }

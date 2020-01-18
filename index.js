@@ -14,6 +14,9 @@ mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: tru
 
 app.use(bodyParser.json());
 app.use('/api', authRoutes);
+app.get('/', (req, res) => {
+  res.send("API Working");
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);

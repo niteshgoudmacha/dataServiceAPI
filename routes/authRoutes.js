@@ -87,7 +87,6 @@ router.post('/post/state/update', async (req, res) => {
             res.status(404).send(`No Record Found with State: ${state} and Month: ${month}\nPlease check your details.`);
         });
         
-        res.status(200).send(places);
     } catch(err) {
         res.status(500).send(err);
     }

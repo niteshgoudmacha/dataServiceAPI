@@ -6,7 +6,7 @@ const path = require('path');
 const authRoutes = require('./routes/authRoutes');
 const app = express();
 
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false}, (err) => {
     if (!err) console.log("Connected to DB");
     else console.log(err);
   });

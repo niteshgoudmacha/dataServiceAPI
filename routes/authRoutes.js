@@ -59,7 +59,7 @@ router.post('/post/state', async (req, res) => {
     try {
         const place = await Places.findOne({ state, month });
         if(place !== null)
-            res.status(200).send(`Record Already Exists with State: ${state} and month: ${month}\nRecord: ${place}`);
+            return res.status(200).send(`Record Already Exists with State: ${state} and month: ${month}\nRecord: ${place}`);
         const places = new Places({
             state,
             location,
@@ -83,7 +83,7 @@ router.post('/post/state/update', async (req, res) => {
                 res.status(500).send(err);
             }
             if(place !== null)
-                res.status(200).send(place);
+                return res.status(200).send(place);
             res.status(404).send(`No Record Found with State: ${state} and Month: ${month}\nPlease check your details.`);
         });
         
